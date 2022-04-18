@@ -5,7 +5,6 @@ import 'package:movielistwithredux/src/models/app_state.dart';
 import 'package:movielistwithredux/src/models/movie.dart';
 import 'package:redux/redux.dart';
 
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 

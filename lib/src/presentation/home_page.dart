@@ -3,6 +3,8 @@ import 'package:flutter_redux/flutter_redux.dart';
 import 'package:movielistwithredux/src/actions/get_movies.dart';
 import 'package:movielistwithredux/src/models/app_state.dart';
 import 'package:movielistwithredux/src/models/movie.dart';
+import 'package:redux/redux.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -10,7 +12,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StoreConnector<AppState, AppState>(
-      converter: (store) => store.state,
+      converter: (Store<AppState> store) => store.state,
       builder: (BuildContext context, AppState state) {
         return Scaffold(
           appBar: AppBar(
